@@ -2,6 +2,12 @@
 
 // Paladin::Paladin
 
-// Paladin::getName
+const std::string& Paladin::getName()
+{
+    return name;
+}
 
-// Paladin::getStats
+std::string& Paladin::getStats()
+{
+    Utility::getCharacterStats(this);
+}

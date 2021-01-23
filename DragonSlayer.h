@@ -1,8 +1,14 @@
 #pragma once
 
+#include "Character.h"
+
 struct DragonSlayer : Character
 {
-    void attack(Character& other) override;
-private:
-    const std::string name;
+    public:
+        const std::string& getName() override;
+        std::string getStats() override;
+        void attack(Character& other) override;
+
+    private:
+        const std::string name;
 };
