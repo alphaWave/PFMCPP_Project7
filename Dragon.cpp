@@ -1,7 +1,7 @@
 #include "Dragon.h"
 #include "DragonSlayer.h"
 
-Dragon::Dragon(std::string name_, int hp_, int armor_, int attackDamage_ = 80) :
+Dragon::Dragon(std::string name_, int hp_, int armor_, int attackDamage_) :
 Character(hp_, armor_, attackDamage_), 
 name(name_)
 {

@@ -4,7 +4,7 @@
 
 struct DragonSlayer : Character
 {  
-    DragonSlayer(std::string name_, int hp_, int armor_);
+    DragonSlayer(std::string name_, int hp_, int armor_, int attackDamage_ = 4);
     
     const std::string& getName() override;
     std::string getStats() override;
