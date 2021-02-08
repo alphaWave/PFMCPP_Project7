@@ -4,10 +4,9 @@
 
 struct Dragon : Character
 {
-    public:
-        const std::string& getName() override;
-        std::string getStats() override;
-        void attack(Character& other) override;
+    const std::string& getName() override;
+    std::string getStats() override;
+    void attack(Character& other) override;
     
     private:
         const std::string name;
