@@ -1,5 +1,7 @@
 #include "DragonSlayer.h"
+
 #include "Dragon.h"
+#include "Utility.h"
 
 
 DragonSlayer::DragonSlayer(std::string name_, int hp_, int armor_, int attackDamage_) : 
@@ -35,7 +37,7 @@ void DragonSlayer::attack(Character& other)
         
 }
 
-std::string& DragonSlayer::getStats()
+std::string DragonSlayer::getStats()
 {
-    Utility::getCharacterStats(this);
+    return Utility::getCharacterStats(this);
 }
