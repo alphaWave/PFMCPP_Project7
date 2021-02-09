@@ -17,5 +17,5 @@ const std::string& Paladin::getName()
 
 std::string Paladin::getStats()
 {
-    return Utility::getCharacterStats(this);
+    return getCharacterStats(this);
 }
