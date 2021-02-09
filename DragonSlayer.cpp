@@ -6,6 +6,8 @@ DragonSlayer::DragonSlayer(std::string name_, int hp_, int armor_, int attackDam
 Character(hp_, armor_, attackDamage_), 
 name(name_)
 {
+    helpfulItems = makeHelpfulItems(randSmall());
+    defensiveItems = makeDefensiveItems(randSmall());
 }
 
 const std::string& DragonSlayer::getName()
