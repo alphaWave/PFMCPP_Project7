@@ -98,26 +98,6 @@ void Character::attackInternal(Character& other)
             c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
       */
         // assert(false);
-        // if (hitPoints < *initialHitPoints)
-        // {
-        //     hitPoints = *initialHitPoints;
-        // }
-        // if (armor < *initialArmorLevel)
-        // {
-        //     armor = *initialArmorLevel;
-        // }
-        // if (attackDamage  < *initialAttackDamage)
-        // {
-        //     attackDamage = *initialAttackDamage;
-        // }
-
-        // hitPoints *= 1.1;
-        // armor *= 1.1;
-        // attackDamage *= 1.1;
-        
-        // *initialHitPoints = hitPoints;
-        // *initialArmorLevel = armor;
-        // *initialAttackDamage = attackDamage;
 
         victoryBoost(hitPoints, initialHitPoints);
         victoryBoost(armor, initialArmorLevel);

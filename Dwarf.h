@@ -2,6 +2,7 @@
 
 #include "Character.h"
 
+
 struct Dwarf : Character
 {
     Dwarf(std::string name_, int hp_, int armor_, int attackDamage_ = 4);

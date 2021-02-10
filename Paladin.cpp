@@ -2,6 +2,7 @@
 
 #include "Utility.h"
 
+
 Paladin::Paladin(std::string name_, int hp_, int armor_, int attackDamage_) : 
 Character(hp_, armor_, attackDamage_), 
 name(name_)
