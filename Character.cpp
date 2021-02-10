@@ -98,29 +98,43 @@ void Character::attackInternal(Character& other)
             c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
       */
         // assert(false);
-        if (hitPoints < initialHitPoints)
-        {
-            hitPoints = initialHitPoints;
-        }
-        if (armorLevel < initialArmorLevel)
-        {
-            armorLevel = initialArmorLevel;
-        }
-        if (attackDamage  < initialAttackDamage)
-        {
-            attackDamage = initialAttackDamage;
-        }
+        // if (hitPoints < *initialHitPoints)
+        // {
+        //     hitPoints = *initialHitPoints;
+        // }
+        // if (armor < *initialArmorLevel)
+        // {
+        //     armor = *initialArmorLevel;
+        // }
+        // if (attackDamage  < *initialAttackDamage)
+        // {
+        //     attackDamage = *initialAttackDamage;
+        // }
 
-        hitPoints *= 1.1;
-        armorLevel *= 1.1;
-        attackDamage *= 1.1;
+        // hitPoints *= 1.1;
+        // armor *= 1.1;
+        // attackDamage *= 1.1;
         
-        initialHitPoints = hitPoints;
-        initialArmorLevel = armorLevel;
-        initialAttackDamage = attackDamage;
+        // *initialHitPoints = hitPoints;
+        // *initialArmorLevel = armor;
+        // *initialAttackDamage = attackDamage;
+
+        victoryBoost(hitPoints, initialHitPoints);
+        victoryBoost(armor, initialArmorLevel);
+        victoryBoost(attackDamage, initialAttackDamage);
         
         std::cout << getName() << " defeated " << other.getName() << " and leveled up!" << std::endl;        
     }
+}
+
+void Character::victoryBoost(int& currentVal, std::unique_ptr<int>& initVal)
+{
+    if (currentVal < *initVal)
+    {
+        currentVal = *initVal;
+    }
+    currentVal *= 1.1;
+    *initVal = currentVal;
 }
 
 void Character::printStats()
@@ -130,7 +144,7 @@ void Character::printStats()
     /*
     make your getStats() use a function from the Utility.h
     */
-    std::cout << getStats(); 
+    std::cout << getCharacterStats(this); 
     
     std::cout << std::endl;
     std::cout << std::endl;
