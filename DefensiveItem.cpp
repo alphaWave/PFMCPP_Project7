@@ -1,5 +1,4 @@
 
-#include <assert>
 #include "DefensiveItem.h"
 
 #include "Dwarf.h"
@@ -10,7 +9,7 @@
 
 void DefensiveItem::use(Character* character)
 {
-    assert(false); 
+    //assert(false); 
     //make your defensive item use the appropriate Utility helper functions
     useDefensiveItem(character, this);
 }
